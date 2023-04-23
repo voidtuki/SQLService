@@ -40,7 +40,8 @@ sum(YEAR(GETDATE()) - YEAR(PeopleBirth)) 年龄总和,
 avg(YEAR(GETDATE()) - YEAR(PeopleBirth)) 年龄平均值 
 from People
 
---方案2 DATEDIFF(year, PeopleBirth, GETDATE()) ，第3个日期减去第2个日期
+--方案2 DATEDIFF(year, PeopleBirth, GETDATE()) ，第一个参数单位
+--第3个日期减去第2个日期
 select count(*) 员工人数,
 max(DATEDIFF(year, PeopleBirth, GETDATE() ) )年龄最大值,
 min(DATEDIFF(year, PeopleBirth, GETDATE() ) )年龄最小值,

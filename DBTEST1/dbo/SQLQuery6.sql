@@ -40,6 +40,7 @@ and
 (PeopleSalary between 15000 and 30000)
 
 --查询出星座是巨蟹座的员工信息（6.22-7.22）
+--6月和7月不能同时满足
 select * from People where
 (month(PeopleBirth)=6 and day(PeopleBirth)>=22)
 or
