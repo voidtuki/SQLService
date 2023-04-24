@@ -1,5 +1,7 @@
 --数据库设计案例
 
+create database DBTEST2
+
 --业务需求说明
 --模拟银行业务，设计简易版的银行数据库表结构，要求可以完成以下基本功能需求：
 --1、银行开户（注册个人信息）及开卡（办理银行卡）（一个人可以办理多张银行卡，但是最多只能办理3张），要区分是新客户还是老客户
@@ -124,5 +126,5 @@ select * from CardTransfer
 
 update BankCard set CardMoney = CardMoney - 1000 where CardNo = '6225125478544587'
 update BankCard set CardMoney = CardMoney + 1000 where CardNo = '622554785874125656'
-insert into CardTransfer(CardNoOut,CardNoIn,TransMoney,TransferTime)
+insert into CardTransfer(CardNoOut,CardNoIn,TransferMoney,TransferTime)
 values('6225125478544587','622554785874125656',1000,GETDATE())
